@@ -1,15 +1,17 @@
 
 # Automating C++ Class Creation in VS Code for 42 Projects
 
-Starting a new C++ project at 42 involves creating many classes. Each class requires creating two files (`.hpp` and `.cpp`), adding standard boilerplate code (like header guards, includes, the "Canonical Form" functions), declaring member variables, and defining member functions. Doing this manually every time is repetitive, slow, and prone to errors.
+Starting a new C++ project at 42 involves creating many classes.   
+Each class requires creating two files (`.hpp` and `.cpp`), adding standard boilerplate code (like header guards, includes, the "Canonical Form" functions), declaring member variables, and defining member functions. Doing this manually every time is repetitive, slow, and prone to errors.
 
-This guide shows you how to use a simple Python script and a VS Code task to automate this process, saving you time and ensuring consistency.
+This guide shows you how to use a **simple Python script and a VS Code task** to automate this process, saving you time and ensuring consistency.
 
-**The Goal:** Create a VS Code command that, when run, asks you for a class name, member variables, and member methods, and then automatically generates the corresponding `.hpp` and `.cpp` files with the necessary boilerplate.
+**The Goal:** Create a VS Code command that, when run, asks you for a **class name, member variables, and member methods**, and then automatically generates the corresponding `.hpp` and `.cpp` files with the necessary boilerplate.
 
 **How it Works:**
 
 1.  **A Python Script:** This script is the core engine. It takes the class name, variable list, and method list as input. It knows the structure of a standard 42 C++ class and generates the text content for both the header (`.hpp`) and source (`.cpp`) files, including the boilerplate, variable declarations/copying, and method definitions.
+   
 2.  **A VS Code Task:** This is how you trigger the Python script from within VS Code. It defines a custom command in VS Code's Command Palette. When you run this task, VS Code will:
     *   Prompt you for the required information (class name, variables, methods).
     *   Execute the Python script, passing your inputs as arguments.
