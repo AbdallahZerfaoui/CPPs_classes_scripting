@@ -26,11 +26,11 @@ This script contains the logic for generating your C++ code.
 1.  Open your C++ project folder in VS Code.
 2.  Create a new folder named `scripts` at the root level of your project (the same level as your `Makefile`).
 3.  Inside the `scripts` folder, create a new file named `create_cpp_class.py`.
-4.  Paste the Python code for the enhanced script into this file. (You mentioned you have this code from our previous discussion/your GitHub repo).
+4.  Paste the Python code from my repo into this file.
 5.  Save the file.
 
 **What this script does:**
-*   It reads the class name, variables string, and methods string provided as command-line arguments.
+*   It reads the class name, the variables string, and the methods string provided as command-line arguments.
 *   It parses the variables string (expected format: `"type1 name1, type2 name2, ..."`) and methods string (expected format: `"ReturnType1 method1(params1), ReturnType2 method2(params2), ..."`) into structured data.
 *   It constructs the full file paths for the `.hpp` file (in an `include` directory) and the `.cpp` file (in a `src` directory). It will create these directories if they don't exist.
 *   It generates the header guard name based on the class name.
@@ -70,7 +70,7 @@ This tells VS Code how to interact with your script.
 3.  Select `Create tasks.json file from template`.
 4.  Select `Others`. This will create a `.vscode` folder with a `tasks.json` file if you don't have one already.
 5.  Open the `.vscode/tasks.json` file.
-6.  Replace the default content with the `tasks.json` code for the enhanced version. (You mentioned you have this code available).
+6.  Replace the default content with the `tasks.json` code from my repo.
 7.  Save the file.
 
 **What this `tasks.json` configuration does:**
@@ -94,11 +94,11 @@ Now you're ready to generate classes quickly.
 2.  Type `Tasks: Run Task` and select it.
 3.  A list of available tasks will appear. Select `"Create C++ Class (Enhanced)"`.
 4.  VS Code will display a sequence of input boxes at the top of the window, corresponding to the `inputs` defined in your `tasks.json`:
-    *   Type the desired **class name** (e.g., `Dog`) and press Enter.
-    *   Type the **member variables** in the specified format (e.g., `std::string _name, int _age`). Separate multiple variables with commas. Press Enter. You can leave this blank and press Enter if you have no variables to add right now.
-    *   Type the **member methods** in the specified format (e.g., `void bark(), int getAge() const`). Separate multiple methods with commas. Press Enter. You can leave this blank and press Enter if you have no methods to add right now.
+    *   Type the desired **class name** (e.g., `Zombie`) and press Enter.
+    *   Type the **member variables** in the specified format (e.g., `std::string _name, int _brainsEaten`). Separate multiple variables with commas. Press Enter. You can leave this blank and press Enter if you have no variables to add right now.
+    *   Type the **member methods** in the specified format (e.g., `void announce(), void eatBrains(int num)`). Separate multiple methods with commas. Press Enter. You can leave this blank and press Enter if you have no methods to add right now.
 5.  After you press Enter for the methods, the VS Code terminal panel will open and execute the Python script with your inputs.
-6.  The terminal will show messages indicating that `include/Dog.hpp` and `src/Dog.cpp` (or whatever class name you chose) have been created.
+6.  The terminal will show messages indicating that `include/Zombie.hpp` and `src/Zombie.cpp` (or whatever class name you chose) have been created.
 
 That's it! You have automatically generated the files and the common boilerplate code for your new C++ class using your scripted VS Code environment.
 
