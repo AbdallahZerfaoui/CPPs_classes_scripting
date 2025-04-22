@@ -6,7 +6,7 @@
 			"type": "shell",
 			"command": "python3",
 			"args": [
-				"./create_cpp_class.py",
+				"./scripts/create_cpp_class.py",
 				"${input:classNameEnhanced}",     // Class name (required)
 				"${input:memberVarsEnhanced}",    // Variables string (optional)
 				"${input:memberMethodsEnhanced}"  // Methods string (optional)
