@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Create C++ Class (Python Enhanced)",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"./create_cpp_class.py",
+				"${input:classNameEnhanced}",     // Class name (required)
+				"${input:memberVarsEnhanced}",    // Variables string (optional)
+				"${input:memberMethodsEnhanced}"  // Methods string (optional)
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": [],
+			"group": "build"
+		}
+	],
+	"inputs": [
+		{
+			"id": "classNameEnhanced",
+			"type": "promptString",
+			"description": "Enter C++ class name:",
+			"default": "NewClass"
+		},
+		{
+			"id": "memberVarsEnhanced",
+			"type": "promptString",
+			"description": "Enter member variables (e.g., string _name, int _age):",
+			"default": ""
+		},
+		{
+			"id": "memberMethodsEnhanced",
+			"type": "promptString",
+			"description": "Enter member methods (e.g., void speak(), int getAge() const):",
+			"default": ""
+		}
+	]
+}
